@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+	package
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:3:5-44
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:1-144:12
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		ADDED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml
+		INJECTED from E:\project\Android\ProjectFirst04\demo\AndroidManifest.xml

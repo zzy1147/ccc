@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTitle">
+        <attr name="titleText" format="string" />
+        <attr name="backColor" format="color" />
+        <attr name="backImage" format="reference" />
+        <attr name="canBack" format="boolean" />
+        <attr name="moreImg" format="reference" />
+        <attr name="moreText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleMusicView">
+
+        <attr name="circle_music_view_progress_width" format="dimension" />
+
+        <attr name="circle_music_view_progress_slot_color" format="color" />
+
+        <attr name="circle_music_view_progress_buffer_color" format="color" />
+
+        <attr name="circle_music_view_progress_color" format="color" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="MusicalNoteLayout">
+
+        <attr name="circle_music_view_res" format="reference" />
+
+        <attr name="circle_music_view_size" format="dimension" />
+
+    </declare-styleable>
+    <declare-styleable name="TagCloudView">
+        <attr name="autoScrollMode">
+            <enum name="disable" value="0"/>
+            <enum name="decelerate" value="1"/>
+            <enum name="uniform" value="2"/>
+        </attr>
+        <attr name="manualScroll" format="boolean"/>
+        <attr name="radiusPercent" format="float"/>
+        <attr name="scrollSpeed" format="float"/>
+        <attr name="lightColor" format="color"/>
+        <attr name="darkColor" format="color"/>
+        <attr name="startAngleX" format="float"/>
+        <attr name="startAngleY" format="float"/>
+    </declare-styleable>
+
+</resources>

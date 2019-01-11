@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.UserActivity">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/ranking_shape" />
+
+    <TextView
+        android:id="@+id/item_community_status_text"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_shape_orange_join"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="确认"
+        android:layout_marginBottom="50dp"
+        android:textSize="@dimen/sp_20"></TextView>
+</LinearLayout>

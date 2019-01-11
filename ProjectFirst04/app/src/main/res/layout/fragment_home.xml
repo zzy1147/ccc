@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_Fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".view.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/home_rv_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_90"
+            android:background="@color/color_FF323544"
+            android:paddingTop="@dimen/dp_23"
+            android:visibility="gone">
+
+        </ListView>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home_swipe"
+            android:layout_below="@id/home_rv_horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_rv_visb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/home_rv_horizontal" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <com.snz.rskj.android.design.CommonTitle
+            android:id="@+id/home_commontitles"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_below="@id/home_rv_horizontal"
+            android:layout_marginTop="@dimen/dp_23">
+
+        </com.snz.rskj.android.design.CommonTitle>
+
+
+    </RelativeLayout>
+</FrameLayout>

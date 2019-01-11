@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_ff9800"
+    tools:context=".view.activity.Find_PswActivity">
+    <com.flyco.tablayout.CommonTabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/common_title"
+        android:layout_marginTop="@dimen/dp_23"
+        android:layout_height="@dimen/dp_38">
+
+
+    </com.flyco.tablayout.CommonTabLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_smartphone_black_24dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请输入注册时的使用的验证码"
+                android:textColor="@color/color_text_reg"
+                android:textColorHint="@color/color_text_reg"
+                android:textSize="@dimen/dp_14"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

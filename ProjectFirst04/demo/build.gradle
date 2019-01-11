@@ -1,0 +1,95 @@
+apply plugin: 'com.android.library'
+
+def getGitVersion() {
+    try {
+        return 'git rev-parse --short HEAD'.execute().text.trim()
+    } catch (Throwable th) {
+        return "";
+    }
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion = '28.0.3'
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+     //  applicationId "com.netease.nim.entertainment.demo"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 15
+        versionName '2.9.0'
+        buildConfigField "String", "GIT_REVISION", "\"${getGitVersion()}\""
+        buildConfigField "String", "BUILD_DATE", "\"${new Date().toLocaleString()}\"";
+
+        javaCompileOptions {
+            // 显式声明支持注解
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+    signingConfigs {
+        debug { storeFile file("debug.keystore") }
+
+        release {
+            storeFile file('release.keystore')
+            storePassword 'thisiskeystorepassword'
+            keyAlias 'nim_chatroom_demo'
+            keyPassword 'thisiskeypassword'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFile('proguard.cfg')
+            signingConfig signingConfigs.release
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res','res-im','res-ptr']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        incremental true
+        preDexLibraries false
+        jumboMode true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: ':lib/libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation project(':lib')
+}

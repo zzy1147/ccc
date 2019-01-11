@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/report_detail_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_report_backgroud"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="举报原因"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="@dimen/sp_15"
+        android:layout_marginLeft="@dimen/sp_15"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(必填)"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/report_textcolor"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toRightOf="@id/report_title"/>
+    <EditText
+        android:id="@+id/report_info"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_below="@id/report_title"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_width="@dimen/dp_345"
+        android:padding="@dimen/dp_3"
+        android:textColor="@color/report_textcolor"
+        android:background="@drawable/shape_report"
+        android:textSize="@dimen/sp_12"
+        android:hint="填写详细信息，如违规时间、做了什么等"
+        android:textColorHint="#E5E5E5"
+        android:gravity="top"
+        android:layout_height="@dimen/dp_120" />
+    <ImageView
+        android:id="@+id/report_commit_img"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_below="@id/report_info"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/select_report_commit"/>
+    <TextView
+        android:id="@+id/report_commit_tv"
+        android:text="提交"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_below="@id/report_info"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_alignRight="@id/report_commit_img"
+        android:layout_alignBottom="@id/report_commit_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

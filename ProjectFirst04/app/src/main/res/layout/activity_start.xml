@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_start_live_page"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/anchor_info"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_35">
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/bt_anchor_head"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:src="@drawable/gift_chocolate" />
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/bt_anchor_head"
+            android:text="小苹果"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_room_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_room_name"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/bt_anchor_head"
+            android:text="房号：12345"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_image_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@id/anchor_info"
+        android:gravity="center">
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_first_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/gift_chocolate" />
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_secnod_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_toRightOf="@id/img_first_user"
+            android:src="@drawable/gift_chocolate" />
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_thirdly_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_toRightOf="@id/img_secnod_user"
+            android:src="@drawable/gift_chocolate" />
+
+        <TextView
+            android:id="@+id/tv_room_user_num"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_30"
+            android:layout_toRightOf="@id/img_thirdly_user"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:text="1500"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/img_close_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/tv_room_user_num"
+            android:src="@drawable/button_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_message_group"
+        android:layout_marginBottom="@dimen/dp_44"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_input"
+            android:background="@drawable/shape_message"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_35" />
+        <EditText
+            android:id="@+id/et_input"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:hint="来吐槽吧~!"
+            android:textSize="@dimen/sp_12"
+            android:gravity="center|left"
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/textColor"
+            android:background="@null"
+            android:drawableEnd="@drawable/button_send"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_35" />
+
+
+        <ImageView
+            android:id="@+id/img_receive_gift"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_gift"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/img_receive_gift"
+            android:layout_marginRight="@dimen/dp_44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_share"/>
+        <ImageView
+            android:id="@+id/img_turn_camera"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/img_share"
+            android:layout_marginRight="@dimen/dp_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_lensoverturn"/>
+    </RelativeLayout>
+
+    <com.snz.rskj.android.view.animator.LoveLayout
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_above="@id/rl_message_group"
+        android:id="@+id/love_layout"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_250">
+    </com.snz.rskj.android.view.animator.LoveLayout>
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--使用FrameLayout当做盛放Fragment对象的容器-->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <!--中间为一条分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D6D6D6" />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <RadioButton
+            android:id="@+id/home_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_hemo_bg"
+            android:drawablePadding="@dimen/dp_3"
+            android:gravity="center"
+            android:text="@string/infomation"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            />
+
+
+        <RadioButton
+            android:id="@+id/talk_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_matching_bg"
+            android:drawablePadding="@dimen/dp_3"
+            android:gravity="center"
+            android:text="@string/talk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            />
+        <!--</LinearLayout>-->
+        <!--给中间凸起按钮预留位置-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+        </LinearLayout>
+        <!--<LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_weight="1">-->
+
+        <RadioButton
+            android:id="@+id/massage_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_chat_bg"
+            android:drawablePadding="@dimen/dp_3"
+            android:gravity="center"
+            android:text="@string/msg_radio"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"/>
+
+        <RadioButton
+            android:id="@+id/mine_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_mine_bg"
+            android:drawablePadding="@dimen/dp_2"
+            android:gravity="center"
+            android:text="@string/mine"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"/>
+        <!-- </LinearLayout>-->
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/image_add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/radio_group"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="-65dp"
+        android:src="@drawable/tab_add" />
+
+</LinearLayout>

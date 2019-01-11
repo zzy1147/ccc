@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitywatch.WatchLiveActivity">
+
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.netease.nim.chatroom.demo.thirdparty.video.NEVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop" />
+
+        <com.netease.nimlib.sdk.avchat.model.AVChatTextureViewRenderer
+            android:id="@+id/video_render"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/anchor_info"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_35">
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/bt_anchor_head"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:src="@drawable/gift_chocolate" />
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/bt_anchor_head"
+            android:text="小苹果"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_room_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_room_name"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/bt_anchor_head"
+            android:text="房号：12345"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_image_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_toRightOf="@id/anchor_info"
+        android:gravity="center">
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_first_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/gift_chocolate" />
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_secnod_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_toRightOf="@id/img_first_user"
+            android:src="@drawable/gift_chocolate" />
+
+        <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+            android:id="@+id/img_thirdly_user"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_toRightOf="@id/img_secnod_user"
+            android:src="@drawable/gift_chocolate" />
+
+        <TextView
+            android:id="@+id/tv_room_user_num"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_30"
+            android:layout_toRightOf="@id/img_thirdly_user"
+            android:gravity="center"
+            android:text="1500"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/img_close_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@id/tv_room_user_num"
+            android:src="@drawable/button_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_message_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_44">
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:background="@drawable/shape_message" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@null"
+            android:drawableEnd="@drawable/button_send"
+            android:gravity="center|left"
+            android:hint="来吐槽吧~!"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            android:textSize="@dimen/sp_12" />
+
+
+        <ImageView
+            android:id="@+id/img_receive_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:src="@drawable/button_gift" />
+
+        <ImageView
+            android:id="@+id/img_kiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toLeftOf="@id/img_receive_gift"
+            android:src="@drawable/button_lips" />
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toLeftOf="@id/img_kiss"
+            android:src="@drawable/button_share" />
+
+        <ImageView
+            android:id="@+id/img_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toLeftOf="@id/img_share"
+            android:src="@drawable/button_report" />
+    </RelativeLayout>
+
+    <com.snz.rskj.android.view.animator.LoveLayout
+        android:id="@+id/love_layout"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_250"
+        android:layout_above="@id/rl_message_group"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dp_20"></com.snz.rskj.android.view.animator.LoveLayout>
+
+    <LinearLayout
+        android:id="@+id/messageActivityBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/nim_message_activity_text_layout" />
+
+        <com.netease.nim.chatroom.demo.im.session.emoji.EmoticonPickerView
+            android:id="@+id/emoticon_picker_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/message_list_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <com.snz.rskj.android.model.listview.MessageListViewEx
+            android:id="@+id/messageListView"
+            style="@style/list_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdge="vertical"
+            android:focusable="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/fake_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/audience_layout"
+        layout="@layout/live_audience_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_share"
+        layout="@layout/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_gift"
+        layout="@layout/audience_gift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_320"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_report_list"
+        layout="@layout/audience_report_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_270"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_report"
+        layout="@layout/audience_report_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_230"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/gift_animation_view"
+        layout="@layout/gift_layout"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/message_list_view_layout"
+        android:layout_marginBottom="3dp" />
+
+    <include
+        android:id="@+id/gift_animation_view_up"
+        layout="@layout/gift_layout"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/gift_animation_view"
+        android:layout_marginBottom="3dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <!-- 连麦观众的播放画面 -->
+        <include layout="@layout/interaction_group_layout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/audio_mode_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/audio_mode_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_master_audio" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/on_mic_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/close_btn"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/on_mic_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/on_mic_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/on_mic_name_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>

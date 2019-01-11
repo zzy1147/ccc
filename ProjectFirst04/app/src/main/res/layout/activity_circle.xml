@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ff9800"
+    android:id="@+id/chat_root_rela"
+    tools:context=".view.home.ui.CircleActivity">
+
+    <com.snz.rskj.android.design.CommonTitle
+        android:id="@+id/cirle_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_23"
+        android:background="@color/color_ffdebd">
+
+    </com.snz.rskj.android.design.CommonTitle>
+
+    <LinearLayout
+        android:id="@+id/chat_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cirle_common_title"
+        android:orientation="vertical"
+
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/chat_ed_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="1"
+            android:background="@drawable/chat_edtext_bg"
+            android:drawableLeft="@drawable/home_btn_search"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:hint="这里是一些字体"
+            android:lines="1"
+            android:paddingLeft="@dimen/dp_12"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/chat_table"
+            android:layout_width="@dimen/dp_170"
+            android:layout_height="@dimen/dp_38"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_40"></android.support.design.widget.TabLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_review_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"></android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_review_my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chat_circle_add"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_60"
+        android:layout_below="@id/chat_lin"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/chat_circle_add_bg"
+        android:drawableLeft="@drawable/live_button_add"
+        android:gravity="center"
+        android:padding="@dimen/dp_4"
+        android:text="添加新圈子"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_13" />
+
+
+</RelativeLayout>

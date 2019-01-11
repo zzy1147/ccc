@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#909033"
+    android:windowSoftInputMode="adjustPan">
+
+    <com.netease.nimlib.sdk.avchat.model.AVChatTextureViewRenderer
+        android:id="@+id/render"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_prepare_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/live_img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/live_button_delete" />
+
+        <RelativeLayout
+            android:id="@+id/live_title_group"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_180"
+            android:layout_below="@id/live_img_delete"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/values"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/live_lin"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_76"
+                android:background="#aeb1cd"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:src="@drawable/live_button_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@string/live_add_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+
+                android:layout_toRightOf="@id/live_lin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="true"
+                    android:maxLines="1"
+
+                    android:text="输入标题更吸引粉丝..."
+                    android:textColor="@color/white"
+
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/live_viwe"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@id/live_lin"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/live_viwe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:text="@string/live_invite_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_12" />
+
+                <ImageView
+                    android:id="@+id/live_img_wechat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/live_button_wechat" />
+
+                <ImageView
+                    android:id="@+id/live_img_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/live_button_circle" />
+
+                <ImageView
+                    android:id="@+id/live_img_micro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/live_button_micro_blog" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/live_lin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_80"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live_agreement_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/live_btn_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live_agreements_text"
+                android:textColor="@color/blue_theme"
+                android:textSize="@dimen/dp_12" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/live_btn_start"
+            android:layout_width="@dimen/dp_345"
+            android:layout_height="@dimen/dp_44"
+            android:layout_above="@id/live_lin2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="114dp"
+            android:background="@drawable/live_button_star"
+            android:text="@string/live_start_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_18" />
+
+
+        <TextView
+            android:id="@+id/live_btn_gorgeous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/live_btn_start"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:drawableStart="@drawable/live_icon_beauty"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="美颜"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_start"
+        layout="@layout/activity_start"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_gift"
+        layout="@layout/live_gift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_220"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_audience"
+        layout="@layout/live_audience_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_beauty"
+        layout="@layout/live_beauty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/messageActivityBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:windowSoftInputMode="adjustPan">
+
+        <include layout="@layout/nim_message_activity_text_layout" />
+
+        <com.netease.nim.chatroom.demo.im.session.emoji.EmoticonPickerView
+            android:id="@+id/emoticon_picker_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/message_list_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <com.snz.rskj.android.model.listview.MessageListViewEx
+            android:id="@+id/messageListView"
+            style="@style/list_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdge="vertical"
+            android:focusable="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/fake_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/gift_animation_view"
+        layout="@layout/gift_layout"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/message_list_view_layout"
+        android:layout_marginBottom="3dp" />
+
+    <include
+        android:id="@+id/gift_animation_view_up"
+        layout="@layout/gift_layout"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/gift_animation_view"
+        android:layout_marginBottom="3dp" />
+
+    <include
+        android:id="@+id/layout_share"
+        layout="@layout/share_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:visibility="gone"/>
+    <GridView
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/apply_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:divider="@color/transparent"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:listSelector="@drawable/item_border_selected"
+        android:numColumns="4"
+        android:verticalSpacing="4dip"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <!-- 连麦观众的播放画面 -->
+        <include layout="@layout/interaction_group_layout" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/audio_mode_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/audio_mode_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_master_audio" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/on_mic_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/close_btn"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/on_mic_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/on_mic_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/on_mic_name_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/gift_background"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>

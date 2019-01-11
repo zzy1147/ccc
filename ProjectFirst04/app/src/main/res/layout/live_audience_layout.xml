@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/audience_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_audience_backgroud">
+
+    <LinearLayout
+        android:id="@+id/audience_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_online_audience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/shape_bottom_border"
+            android:text="在线观众"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/tv_online_microphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:text="麦序列表"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/live_audience_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_below="@id/audience_title">
+    </android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/live_maixu_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_below="@id/audience_title">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

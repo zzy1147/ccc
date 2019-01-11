@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_50"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/input_register_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_margin="@dimen/dp_3"
+        android:textColor="@color/color_text_reg"
+        android:textColorHint="@color/color_text_reg"
+        android:background="@color/color_ff9800"
+        android:hint="请输入验证码" />
+
+    <View
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/white" />
+
+
+
+    <Button
+        android:id="@+id/register_code_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_reg"
+        android:textSize="@dimen/sp_16"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_30"
+
+        android:background="@drawable/btn_shape_theme"
+        android:text="提交" />
+
+</LinearLayout>

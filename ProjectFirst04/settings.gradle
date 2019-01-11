@@ -1,0 +1,1 @@
+include ':app', ':xrecyclerview', ':frame', ':uikit', ':rtskit', ':jrmfRpWalletlib', ':faceunity', ':avchatkit', ':demo', ':lib'

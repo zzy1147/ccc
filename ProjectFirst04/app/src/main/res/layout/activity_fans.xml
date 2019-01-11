@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_theme"
+    tools:context=".view.maine.FansActivity">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:layout_marginTop="@dimen/dp_23">
+
+    </com.flyco.tablayout.CommonTabLayout>
+
+    <RelativeLayout
+        android:id="@+id/fans_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/common_title">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

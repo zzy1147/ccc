@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+   <RelativeLayout
+       android:id="@+id/left_group"
+       android:visibility="gone"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+           android:id="@+id/left_author_img"
+           android:layout_margin="@dimen/dp_10"
+           android:src="@mipmap/ic_launcher"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:id="@+id/left_author_content"
+           android:layout_toRightOf="@id/left_author_img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:textSize="@dimen/sp_14"
+           android:textColor="@color/black"
+           android:text="好的"
+           android:padding="@dimen/dp_10"
+           android:background="@drawable/nim_message_item_left_selector"/>
+       <ImageView
+           android:id="@+id/left_author_image"
+           android:layout_toRightOf="@id/left_author_img"
+           android:layout_width="@dimen/dp_150"
+           android:layout_height="@dimen/dp_100"
+           android:layout_centerVertical="true"
+           android:visibility="visible"/>
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/right_group"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <com.netease.nim.chatroom.demo.im.ui.widget.CircleImageView
+           android:id="@+id/right_author_img"
+           android:src="@mipmap/ic_launcher"
+           android:layout_margin="@dimen/dp_10"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:id="@+id/right_author_content"
+           android:layout_toLeftOf="@id/right_author_img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:textSize="@dimen/sp_14"
+           android:textColor="@color/black"
+           android:text="好的"
+           android:padding="@dimen/dp_10"
+           android:background="@drawable/nim_message_item_right_selector"/>
+       <ImageView
+           android:id="@+id/right_author_image"
+           android:layout_toLeftOf="@id/right_author_img"
+           android:layout_width="@dimen/dp_150"
+           android:layout_height="@dimen/dp_100"
+           android:layout_centerVertical="true"
+           android:visibility="gone"/>
+   </RelativeLayout>
+</RelativeLayout>

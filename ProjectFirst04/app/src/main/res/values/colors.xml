@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="default_color">#00FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_theme">#222222</color>
+    <color name="grey_theme">#a4a4a4</color>
+    <color name="red_theme">#d53d3c</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="gift_color">#7579FF</color>
+    <color name="report_textcolor">#E5E5E5</color>
+    <color name="share_text">#999999</color>
+    <color name="chat_text">#000000</color>
+    <color name="main_color">#FF5EC7FE</color>
+    <color name="red_pop_text">#ff4e4e</color>
+    <color name="blue_theme">#3885af</color>
+    <color name="green_theme">#1AAC19</color>
+    <color name="splash_bar">#3F71CC</color>
+    <color name="popup_bg">#8f000000</color>
+    <color name="white_80">#33000000</color>
+    <color name="color_ff9800">#171920</color>
+    <color name="color_ffdebd">#323544</color>
+    <color name="color_FF323544">#323544</color>
+    <color name="color_view">#292c37</color>
+    <color name="color_text_reg">#FFD0D1D2</color>
+    <color name="colorBg">#f5f5f5</color>
+    <color name="colorBlack33">#333333</color>
+    <color name="pink_fc4f74">#fc4f74</color>
+
+
+    <color name="bg_info_layout">#303443</color>
+    <color name="app_theme_bg">#15171E</color>
+    <color name="app_text_color_gray">#999999</color>
+</resources>
